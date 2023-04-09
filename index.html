@@ -10,11 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
 </head>
 <body>
-     
-    
 <!--javaScript para togge menu-->
     <script>
         var navLinks = document.getElementById("navLinks");
@@ -24,12 +21,8 @@
         function hideMenu(){
             navLinks.style.right="-200px";
         }
-        
-
     </script>
-
     <!--campus-->
-    
     <!--facilidades-->
     <section class="facilities" id="facilities">
         <h1>E-book React Native </h1>
@@ -37,37 +30,25 @@
          <div class="row">
              <div class="facilities-col">
                  <img src="react.png">
-               
              </div>
-            
          </div>
     </section>
-    
-      
     <section class="footer" id="fooder">
-        <div id="smart-button-container">
-            <div style="text-align: center;">
-              <div id="paypal-button-container"></div>
-            </div>
-
-
-        </div>
-     
-        <div style="padding: 20px;  justify-content: center; align-items: center;" >
-            <h4 style="display: flex; justify-content: center; align-items: center; ">Pix</h4>
-            <img  src="qrcode.png"  width="100" height="100" >
-           
-        </div>
-        <div class="whats">
-          <a href="https://wa.me/5511986244329" target="_blank" >
-          <h6 style="display: flex; justify-content: center; align-items: center;"></h6>
-          <img src="whats5.jpeg" width="60" alt="Fale conosco" title="Fale conosco" >
-          </a>
-        </div>
-    
-
-        <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=BRL" data-sdk-integration-source="button-factory"></script>
-        <script>
+           <div id="smart-button-container">
+              <div class="whats" id="whats">
+                  <div style="text-align: center;">
+                        <div id="paypal-button-container"></div>
+                  </div>
+                  <h5>Pix</h5>
+                  <img  src="qrcode.png"  width="100" height="100" >
+                  <a href="https://wa.me/5511986244329" target="_blank" >
+                  <h6 style="display: flex; justify-content: flex-end; align-items: flex-end;"></h6>
+                  <img src="whats5.jpeg" width="60" alt="Fale conosco" title="Fale conosco" >
+                  </a>
+              </div>
+          </div>
+         <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=BRL" data-sdk-integration-source="button-factory"></script>
+         <script>
           function initPayPalButton() {
             paypal.Buttons({
               style: {
@@ -75,15 +56,12 @@
                 color: 'blue',
                 layout: 'vertical',
                 label: 'buynow',
-                
               },
-      
               createOrder: function(data, actions) {
                 return actions.order.create({
                   purchase_units: [{"description":"e-book React Native","amount":{"currency_code":"BRL","value":80}}]
                 });
               },
-      
               onApprove: function(data, actions) {
                 return actions.order.capture().then(function(orderData) {
                   
@@ -99,7 +77,6 @@
                   
                 });
               },
-      
               onError: function(err) {
                 console.log(err);
               }
@@ -107,10 +84,6 @@
           }
           initPayPalButton();
         </script>
-    
-             
-               
-        
   </section>
 </body>
 </html> 
